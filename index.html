@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clarity Act Comparator - Gemini Interface</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #030712; /* Even deeper charcoal/almost black */
+        color: #d1d5db; /* text-gray-300 default */
+      }
+      
+      /* Improved typography */
+      .prose p {
+        font-size: 1.0625rem; /* 17px */
+        line-height: 1.75;
+        letter-spacing: 0.01em;
+      }
+      
+      @media (max-width: 640px) {
+        .prose p {
+          font-size: 1rem; /* 16px on mobile */
+          line-height: 1.7;
+        }
+      }
+      /* Custom futuristic scrollbar */
+      ::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0D1117; /* Dark slate for track */
+      }
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(to bottom, #0ea5e9, #0891b2); /* Sky/Cyan gradient */
+        border-radius: 5px;
+        border: 2px solid #0D1117; 
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(to bottom, #22d3ee, #06b6d4); /* Brighter Cyan gradient */
+      }
+      ::-webkit-scrollbar-corner {
+        background: #030712;
+      }
+
+      .collapsible-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease-out; /* Slightly faster, refined easing */
+        opacity: 0;
+      }
+      .collapsible-content.open {
+        max-height: 20000px; 
+        opacity: 1;
+        transition: max-height 0.8s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s 0.1s ease-in-out; 
+      }
+
+      .futuristic-glow-border {
+        box-shadow: 0 0 8px rgba(14, 165, 233, 0.25), 0 0 15px rgba(14, 165, 233, 0.15);
+      }
+      .futuristic-glow-text {
+        text-shadow: 0 0 6px rgba(14, 165, 233, 0.5);
+      }
+      
+    </style>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lexend:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "@google/generative-ai": "https://esm.sh/@google/generative-ai@^0.21.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-gray-900 text-gray-300">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

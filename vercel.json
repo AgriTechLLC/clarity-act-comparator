@@ -1,0 +1,10 @@
+{
+  "env": {
+    "VITE_GOOGLE_AI_API_KEY": "@gemini-api-key"
+  },
+  "build": {
+    "env": {
+      "VITE_GOOGLE_AI_API_KEY": "@gemini-api-key"
+    }
+  }
+}
